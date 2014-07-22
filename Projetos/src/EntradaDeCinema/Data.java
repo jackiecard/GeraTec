@@ -18,8 +18,18 @@ public class Data {
 		int diaA = pegaDia(atual);
 		int mesA = pegaMes(atual);
 		int anoA = pegaAno(atual);
-		int dataAtualEmDias = diaA + (mesA * 30) + (anoA * 365);
-		int emDias = getDia() + (getMes() * 30) + (getAno() * 365);
+		int numdias = 0;
+		if(mesA == 2){
+			numdias = 28;
+		}
+		if(mesA == 4 || mesA == 6 || mesA == 9 || mesA == 11){
+			numdias = 30;
+		}
+		else{
+			numdias = 31;
+		}
+		int dataAtualEmDias = diaA + (mesA * numdias) + (anoA * 365);
+		int emDias = getDia() + (getMes() * numdias) + (getAno() * 365);
 		int idade = dataAtualEmDias - emDias;
 		return (double)idade/365;
 	}
