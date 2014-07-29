@@ -2,13 +2,13 @@ package Conta;
 
 public class Conta {
 	
-	private int saldo;
+	private double saldo;
 	private static int incremento = 0;
 	private int id = 1000;
-	private int limite;
+	private double limite;
 	private String dono;
 	
-	public Conta(String n, int l){
+	public Conta(String n, double l){
 		setDono(n);
 		setLimite(l);
 		setSaldo(0);
@@ -31,11 +31,11 @@ public class Conta {
 		setSaldo(getSaldo() + valor);
 	}
 
-	public int getSaldo() {
+	public double getSaldo() {
 		return saldo;
 	}
 
-	public void setSaldo(int saldo) {
+	public void setSaldo(double saldo) {
 		this.saldo = saldo;
 	}
 
@@ -48,11 +48,11 @@ public class Conta {
 		incrementar();
 	}
 
-	public int getLimite() {
+	public double getLimite() {
 		return limite;
 	}
 
-	public void setLimite(int limite) {
+	public void setLimite(double limite) {
 		this.limite = limite;
 	}
 
