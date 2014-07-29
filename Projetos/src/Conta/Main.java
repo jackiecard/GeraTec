@@ -15,6 +15,14 @@ public class Main {
 		g.somaSaldos(c,b,d);
 		System.out.println();
 		g.mostraContas(c,b,d);
+		Agencia ag = new Agencia();
+		ag.addConta(c);
+		ag.addConta(b);
+		ag.addConta(d);
+		System.out.println(ag.toString(ag.buscaId(1001)));
+		System.out.println(ag.toString(ag.buscaCliente("Jackie")));
+		ag.taxaAdm();
+		g.mostraContas(c,b,d);
 	}
 
 }
