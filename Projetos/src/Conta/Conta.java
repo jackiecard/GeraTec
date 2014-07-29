@@ -19,7 +19,7 @@ public class Conta {
 		incremento++;
 	}
 	
-	public boolean debita(int valor){
+	public boolean debita(double valor){
 		if((getSaldo() - valor) > (-getLimite())){
 			setSaldo(getSaldo() - valor);
 			return true;
@@ -27,7 +27,7 @@ public class Conta {
 		return false;
 	}
 	
-	public void credita(int valor){
+	public void credita(double valor){
 		setSaldo(getSaldo() + valor);
 	}
 

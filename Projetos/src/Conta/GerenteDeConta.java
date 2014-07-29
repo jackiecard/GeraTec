@@ -2,21 +2,17 @@ package Conta;
 
 public class GerenteDeConta {
 	
-	private static Conta c;
-	
 	public GerenteDeConta(){
 	}
 	
-	public static boolean usaLimite(Conta conta){
-		c = conta;
+	public static boolean usaLimite(Conta c){
 		if(c.getSaldo() < 0 &&  c.getSaldo() >= (-c.getLimite())){
 			return true;
 		}
 		return false;
 	}
 	
-	public static boolean proximoLimite(Conta conta){
-		c = conta;
+	public static boolean proximoLimite(Conta c){
 		double dezPc = c.getLimite() * 0.9;
 		if(usaLimite(c)){
 			if(c.getSaldo() <= (-dezPc)){
@@ -27,7 +23,7 @@ public class GerenteDeConta {
 	}
 	
 	public static void somaSaldos(Conta ...contas){
-		int soma = 0;
+		double soma = 0;
 		for (Conta conta : contas) {
 			soma += conta.getSaldo();
 		}
@@ -46,8 +42,7 @@ public class GerenteDeConta {
 		}
 	}
 	
-	public static void verificarSaldo(Conta conta){
-		c = conta;
+	public static void verificarSaldo(Conta c){
 		System.out.println("Saldo da conta " + c.getId() + ": " + c.getSaldo());
 	}
 	
