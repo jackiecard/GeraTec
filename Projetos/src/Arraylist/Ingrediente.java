@@ -12,7 +12,7 @@ public class Ingrediente {
 	
 	public String toString(){
 		String srt = "";
-		srt+= getNome() + "(" + getQtd() + ")";
+		srt+= getNome() + " - " + getQtd() + "g";
 		return srt;
 	}
 

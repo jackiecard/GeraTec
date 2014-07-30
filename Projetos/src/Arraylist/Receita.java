@@ -42,7 +42,8 @@ public class Receita {
 		}
 		return false;
 		/*
-		 * Não funca nesse exemplo
+		 * Só funciona com objetos iguais
+		 * Não é recomendado nesse caso
 		if(ing.containsAll(ingredientes)){
 			return true;
 		}
