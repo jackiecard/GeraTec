@@ -3,33 +3,7 @@ package Arraylist;
 import java.util.ArrayList;
 
 public class Receita {
-	/*
-	   public Receita(String nome)  // Construtor 
-	   // Retorna uma lista com os ingredientes da receita (lista de
-	   // instâncias da classe Ingrediente).
-	   
-	   public ArrayList ingredientes();
-	   // Acrescenta um ingrediente à receita
-	   
-	   public void adicionaIngrediente(Ingrediente i);
-	   // Acrescenta um conjunto de ingredientes à receita
-	   public void adicionaIngredientes(ArrayList ingredientes);
-	   
-	   // Verifica se é possível preparar a receita com um conjunto de ingredientes
-	   // Retorna verdadeiro se o conjunto passado como parâmetro contiver todos
-	   // os ingredientes necessários para o preparo, em quantidade suficiente.
-	   public bool possoPreparar(ArrayList ingredientes);
-	   
-	   // Retorna um string com todos os ingredientes, um por linha, sendo cada
-	   // ingrediente no formato especificado na classe Ingrediente
-	   public String toString();
-	   
-	   // Retorna o nome
-	   public String getNome();
-	   
-	   // Programa main que demonstre todos os métodos implementados
-	    * */
-	
+		
 	private ArrayList<Ingrediente> ing;
 	private String nome;
 	
@@ -48,14 +22,14 @@ public class Receita {
 	}
 	
 	public boolean possoPreparar(ArrayList<Ingrediente> ingredientes){
-		int contNeces = getIng().size();
-		int cont = 0;
+		int contNecessario = getIng().size();
+		int contDisponivel = 0;
 		ArrayList<Ingrediente> ing = getIng();
 		for (Ingrediente ingrediente : ingredientes) {
 			for (Ingrediente i : ing) {
 				if(ingrediente.getNome().equalsIgnoreCase(i.getNome())){
 					if(i.getQtd() == ingrediente.getQtd()){
-						cont++;
+						contDisponivel++;
 					}
 					else{
 						return false;
@@ -63,7 +37,7 @@ public class Receita {
 				}
 			}
 		}
-		if(contNeces == cont){
+		if(contNecessario == contDisponivel){
 			return true;
 		}
 		return false;

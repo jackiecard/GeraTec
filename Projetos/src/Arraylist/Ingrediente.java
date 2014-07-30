@@ -31,7 +31,5 @@ public class Ingrediente {
 	public void setQtd(float qtd) {
 		this.qtd = qtd;
 	}
-	
-	
-	
-	}
+
+}
