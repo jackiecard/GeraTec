@@ -24,7 +24,8 @@ public class Main {
 		bolo.addIngrediente(laranja2);
 		bolo.addIngrediente(new Ingrediente("Chocolate", 2000));
 		System.out.print("Status da receita: ");
-		System.out.println(bolo.possoPreparar(ingreNecessarios) ? "os ingredientes estão disponíveis.\n" : "falta ingredientes.\n");
+		System.out.println(bolo.possoPreparar(ingreNecessarios) ? 
+				"os ingredientes estão disponíveis.\n" : "falta ingredientes.\n");
 		System.out.println(bolo.toString());
 	}
 
